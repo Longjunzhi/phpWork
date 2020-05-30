@@ -1,9 +1,13 @@
 <?php
-class test{
-    public static function p($p){
-        echo "<pre>"; 
-        print_r ($p);
-        echo "</pre>";
-    }
-}
+include './db.php';
+$condition=[
+    good_id=>'1'
+];
+$data=[
+    good_name=>'连衣qun',
+    good_prize=>'90'
+];
+$r= db::updateTable('goods',$condition,$data);
+var_dump ($r);
+
 ?>

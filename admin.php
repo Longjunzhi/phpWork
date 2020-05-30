@@ -13,30 +13,31 @@ include './db.php';
  * 修改商品信息
  * 删除商品
  */
-    $rows =db::getTable("users");
-    foreach($rows as $val){
-         echo "name:".$val['user_name'].'---'.$val['user_number'];
-         echo '<br />';
-         }
+     $rows =db::getTable("goods_info_view",null);
 
 ?>
-<button>增加新的商品</button>
+<ul>
+    <li>
+        <a href="addGoods.php">
+            <button>增加新的商品</button>   
+        </a>
+    </li>
+</ul>
     <ul>
+ 
+         <?php foreach($rows as $val){ ?>
         <li>
-            <label ><?php  ?></label>
+            <label>商品id:<?php echo $val['g_id']?></label><br />
+            <label>商品名字:<?php echo $val['商品名']?></label><br />
+            <label>商品价格:<?php echo $val['价格']?></label><br />
+            <label>商品状态:<?php echo $val['状态']?></label><br />
+            <button>修改</button><button>下架</button><br />
         </li>
-        <li>
-            <label>商品id:1</label><br />
-            <label>商品名字:天使上衣</label><br />
-            <label>商品价格:59.9</label><br />
-            <label>商品状态:正常</label><br />
-            <button>修改</button><button>删除</button></li><br />
-        <li>
-            <label>商品id:2</label> <br />
-            <label>商品名字:阿尼克上衣</label> <br />
-            <label>商品价格:29.9</label> <br />
-            <label>商品价格:正常</label><br />
-            <button>修改</button><button>删除</button></li><br />
+         <?php }  ?>
     </ul>
+    <script>
+    
+    </script>
 </body>
+
 </html>
