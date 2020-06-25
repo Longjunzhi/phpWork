@@ -31,7 +31,7 @@
             }
             $sql='UPDATE '.$table.' SET '.implode(' , ',$data_str).' '." WHERE ".implode(" and ",$condition_str).';' ;
             $res = mysqli_query(self::$link,$sql);
-            echo $sql;
+            // echo $sql;
             self::closeLink();
             return $res;
         }

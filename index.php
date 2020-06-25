@@ -17,7 +17,7 @@
 <li><a href="">（4）实现用户购物车的管理功能；</a> </li>
 <li><a href="">（5）实现会员用户的管理功能；</a> </li>
 <li><a href="">（6）实现用户订单管理功能。</a> </li>
-<li><a href="test.php">（7）临时代码用来测试使用</a> </li>
+<li><a href="updateGood.php">（7）临时代码用来测试使用</a> </li>
 </ol>
 <div class="container">
 

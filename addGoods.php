@@ -1,6 +1,6 @@
 <?php
 include './db.php';
-$rows =db::getTable("good_status");
+$rows =db::getTable("good_status",null);
 
 if($_POST){
   if($_POST['s_id']==0 || $_POST['g_name']==''||$_POST['g_prize']==''){
